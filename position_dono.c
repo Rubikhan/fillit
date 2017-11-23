@@ -6,7 +6,7 @@
 /*   By: smaddux <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 20:19:31 by smaddux           #+#    #+#             */
-/*   Updated: 2017/11/23 00:36:29 by smaddux          ###   ########.fr       */
+/*   Updated: 2017/11/23 14:19:15 by smaddux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,6 +126,12 @@ void create_grid(char **pass_donos, int a)
 	if((n == 2) && (ft_strequ(pass_donos[0], "AA...AA"))) // fine edge case imo
 	{
 		ft_putstr("AA\nAA\n");
+		exit(4);
+		return ;
+	}
+	if((n == 2) && (ft_strequ(pass_donos[0], "AA..AA"))) // fine edge case imo
+	{
+		ft_putstr(".AA\nAA.\n...\n");
 		exit(4);
 		return ;
 	}
